@@ -20,6 +20,10 @@ export default function DashboardLayout({
         { label: "Payouts", href: "/payouts" },
     ];
 
+    if (user?.role === "FINANCE") {
+        navItems.push({ label: "Audit Logs", href: "/audits" });
+    }
+
     return (
         <div className="flex h-screen bg-zinc-50 dark:bg-zinc-950">
             {/* Sidebar */}
@@ -36,8 +40,8 @@ export default function DashboardLayout({
                                 key={item.href}
                                 href={item.href}
                                 className={`flex items-center px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive
-                                        ? "bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-50"
-                                        : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
+                                    ? "bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-50"
+                                    : "text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
                                     }`}
                             >
                                 {item.label}

@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Payout Management Frontend
 
-## Getting Started
+A modern, responsive dashboard for managing payouts, built with Next.js.
 
-First, run the development server:
+## 🚀 Quick Start (Under 5 Minutes)
 
+### 1. Prerequisites
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- Payout Management Backend (Running at http://localhost:5000)
+
+### 2. Setup
+Clone the repository and install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Environment Configuration
+Create a `.env.local` file in the root directory:
+```bash
+touch .env.local
+```
+Update the `.env.local` file with the backend API URL:
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Run the Application
+#### Development Mode (with hot-reload):
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### Production Mode:
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 🛠 Tech Stack
+- **Next.js 16**: React framework for production
+- **TypeScript**: Static typing for robust code
+- **Tailwind CSS 4**: Utility-first CSS framework
+- **Lucide React**: Icon library
+- **React Compiler**: Optimized rendering performance
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
+- `src/app`: Next.js App Router (pages and layouts)
+- `src/components`: Reusable UI components
+- `src/services`: API client and data fetching logic
+- `src/types`: TypeScript interfaces and types
+- `src/utils`: Utility functions and formatting helpers
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Design System
+The project uses a clean, professional design system with:
+- Dark mode support
+- Responsive layouts
+- Shared UI components (Button, Input, Table, etc.)
+- Consistent spacing and typography
